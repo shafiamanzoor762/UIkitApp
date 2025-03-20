@@ -53,4 +53,3 @@ class LoginViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
-
