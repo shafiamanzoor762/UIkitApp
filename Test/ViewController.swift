@@ -42,7 +42,14 @@ class ViewController: UIViewController {
             present(loginVC, animated: true, completion: nil)
         }
     }
-
+    
+    @IBAction func goToTable1View(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Table1View", bundle: nil)
+        if let tableVC = storyboard.instantiateViewController(withIdentifier: "Table1ViewController") as? Table1ViewController {
+            tableVC.modalPresentationStyle = .fullScreen
+            present(tableVC, animated: true, completion: nil)
+        }
+    }
 
 }
 

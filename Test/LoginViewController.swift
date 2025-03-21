@@ -22,30 +22,29 @@ class LoginViewController: UIViewController {
         loginLabel.font = UIFont.preferredFont(forTextStyle: .title1)
         //UIFont.boldSystemFont(ofSize: loginLabel.font.pointSize)
         
-        googleButton.layer.borderWidth = 0.5    // Border width
-        googleButton.layer.borderColor = UIColor.gray.cgColor // Border color
+        googleButton.layer.borderWidth = 0.5
+        googleButton.layer.borderColor = UIColor.gray.cgColor
         googleButton.layer.cornerRadius = 10
         
-        facebookButton.layer.borderWidth = 0.5   // Border width
-        facebookButton.layer.borderColor = UIColor.gray.cgColor // Border color
+        facebookButton.layer.borderWidth = 0.5
+        facebookButton.layer.borderColor = UIColor.gray.cgColor
         facebookButton.layer.cornerRadius = 10
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        gradientLayer.frame = view.bounds // Ensure it resizes properly
+        gradientLayer.frame = view.bounds
     }
 
     func setGradientBackground() {
         gradientLayer.frame = view.bounds
 
-        // Define gradient colors (from top to bottom)
         gradientLayer.colors = [
             UIColor.systemCyan.cgColor,
             UIColor.systemGreen.cgColor
         ]
         
-        // Set gradient direction (top to bottom)
+        // Seting gradient direction (top to bottom)
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         
