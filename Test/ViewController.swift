@@ -50,6 +50,15 @@ class ViewController: UIViewController {
             present(tableVC, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func goToWeather(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "WeatherView", bundle: nil)
+        if let weatherVC = storyboard.instantiateViewController(withIdentifier: "WeatherViewController") as? WeatherViewController {
+            weatherVC.modalPresentationStyle = .fullScreen
+            present(weatherVC, animated: true, completion: nil)
+        }
+    }
+    
 
 }
 
